@@ -1,0 +1,5 @@
+fila = {1,2,3,4,5,6,7,8,9}
+fila.insert(4,29)
+print("adiciona: ",fila)
+fila.pop(1)
+print("retira: ",fila)
