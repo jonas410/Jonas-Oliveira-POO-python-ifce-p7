@@ -1,0 +1,5 @@
+pilha = {1,2,3,4,5,6}
+pilha.append(10)
+print("adiciona: ",pilha)
+pilha.pop(0)
+print("retira: ",pilha)
