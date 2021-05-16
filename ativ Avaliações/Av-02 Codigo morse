@@ -1,6 +1,5 @@
-class Morse(object):class Morse(object):
-    def __init__(self):
-        self.morse_code = {
+def texto_morse(text):
+    morse_code = {
             'A': '.-', 'B': '-...',
             'C': '-.-.', 'D': '-..',
             'E': '.', 'F': '..-.',
@@ -21,41 +20,12 @@ class Morse(object):class Morse(object):
             '6': '-....', '7': '--...',
             '8': '---..', '9': '----.'
         }
- 
-    def decode(self, morsecode):
-        ''' Decodifica codigo morse '''
-        code = morsecode.split(' ')
-        text = ''
-        for item in code:
-            for key, value in self.morse_code.iteritems():
-                if item == value:
-                    text += key
-                    break
-        return text
- 
-    def encode(self, plaintext):
-        ''' Codifica em codigo morse '''
-        code = ''
-        for char in plaintext.upper():
-            if char in self.morse_code.keys():
-                code += self.morse_code[char] + ' '
-        return code
-        
-        # -*- coding: utf-8 -*-
-from morse import Morse
-import sys
- 
-versao = sys.version_info[0]
- 
-if versao == 2:
-    leitura = raw_input
-elif versao == 3:
-    leitura = input
- 
-txt_in = leitura('Texto a ser codificado: ')
- 
-morse = Morse()
-codigo = morse.encode(txt_in)
-print
-print('Codigo Morse: {0}'.format(codigo))
-print(' Texto plano: {0}'.format(morse.decode(codigo)))
+ codigo_morse = ""
+    for x in text:
+        codigo_morse += morse[x]
+
+    return codigo_morse
+text = input("diga o que você deseja converter para codigo morse: ")
+print(texto_morse(text))
+
+       
