@@ -57,7 +57,9 @@ class main():
 
     print(FP.calcularFolha())
 
+    print(CL01.calcularSalario())
     print(CL02.calcularSalario())
+    print(CL03.calcularSalario())
 
 if __name__ == '__main__':
     main()
