@@ -1,6 +1,6 @@
 from flask import Flask, Response, request
 import json
-from Avaliação 06.models import Cliente, Produto, ItemNotaFiscal, NotaFiscal
+from Avaliacao06.models import Cliente, Produto, ItemNotaFiscal, NotaFiscal
 
 
 app = Flask(__name__)
