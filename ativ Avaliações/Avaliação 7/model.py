@@ -1,5 +1,5 @@
 import datetime
-from Avaliação 7.app.app import db
+from Avaliacao7.app.app import db
 
 class Cliente(db.Model):
     __tablename__ = 'CLIENTE'
